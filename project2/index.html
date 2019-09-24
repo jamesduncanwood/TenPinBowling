@@ -1,0 +1,819 @@
+    <!doctype html>
+
+
+    <html>
+
+    <head>
+
+        <title>Ten Pin Bowling</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <!--
+                 <div>
+            <h1>Welcome to the ten pin bowling calculator</h1>
+
+            </div>
+-->
+
+
+
+            <!--
+            <button id="refreshButton" onclick="refreshFunction()">
+                Click here to begin/refresh</button>
+-->
+
+            <br>
+            <br>
+
+            <button id="button1" value=1 onclick="button1()">1</button>
+            <button id="button2" value=2 onclick="button2()">2</button>
+            <button id="button3" value=3 onclick="button3()">3</button>
+            <button id="button4" value=4 onclick="button4()">4</button>
+            <button id="button5" value=5 onclick="button5()">5</button>
+            <button id="button6" value=6 onclick="button6()">6</button>
+            <button id="button7" value=7 onclick="button7()">7</button>
+            <button id="button8" value=8 onclick="button8()">8</button>
+            <button id="button9" value=9 onclick="button9()">9</button>
+            <button id="button10" value=10 onclick="button10()">10</button>
+
+            <div style="float: right">
+                <p id="currentFrame"></p>
+                <p id="rolesCompleted"></p>
+
+            </div>
+
+            <br><br>
+
+
+
+
+
+            <!--         <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>
+            <div>
+                <table id="xxx" border="none">
+                    <tr>
+                        <td class="quadrant">1</td>
+                        <td class="toprightquadrant">2</td>
+                    </tr>
+                    <tr>
+                        <td class="bottomquadrant" rowspan="1">3</td>
+            
+                    </tr>
+                </table>
+            </div> -->
+
+
+
+
+
+
+
+
+            <table style="width:100%">
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+
+
+                </tr>
+
+
+                <tr>
+
+                    <!-- Frame 1 -->
+                    <td class="frameStyle">
+                        <div>
+                            <table id="xxx" border="none">
+                                <tr>
+                                    <td class="quadrant">
+                                        <p id="input1"></p>
+                                    </td>
+                                    <td class="toprightquadrant">
+                                        <p id="trq1"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bottomquadrant" id="bq1"></td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+
+                    <!-- Frame 2 -->
+                    <td id="frame2">
+                        <div>
+                            <table id="xxx" border="none">
+                                <tr>
+                                    <td class="quadrant">
+                                        <p id="input2"></p>
+                                    </td>
+                                    <td class="toprightquadrant">
+                                        <p id="trq2"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bottomquadrant" id="bq2"></td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+
+                    <!-- Frame 3 -->
+                    <td id="frame3">
+                        <div>
+                            <table id="xxx" border="none">
+                                <tr>
+                                    <td class="quadrant">
+                                        <p id="input3"></p>
+                                    </td>
+                                    <td class="toprightquadrant">
+                                        <p id="trq3"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bottomquadrant" id="bq3"></td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+
+
+                    <!--                    frame 4-->
+                    <td id="frame4">
+                        <div>
+                            <table id="xxx" border="none">
+                                <tr>
+                                    <td class="quadrant">
+                                        <p id="input4"></p>
+                                    </td>
+                                    <td class="toprightquadrant">
+                                        <p id="trq4"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bottomquadrant" id="bq4"></td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+
+
+                    <!--                    frame 5-->
+                    <td id="frame5">
+                        <div>
+                            <table id="xxx" border="none">
+                                <tr>
+                                    <td class="quadrant">
+                                        <p id="input5"></p>
+                                    </td>
+                                    <td class="toprightquadrant">
+                                        <p id="trq5"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bottomquadrant" id="bq5"></td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <!--                    frame 6-->
+                    <td id="frame6">
+                        <div>
+                            <table id="xxx" border="none">
+                                <tr>
+                                    <td class="quadrant">
+                                        <p id="input6"></p>
+                                    </td>
+                                    <td class="toprightquadrant">
+                                        <p id="trq6"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bottomquadrant" id="bq6"></td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <!--                    frame 4-->
+                    <td id="frame7">
+                        <div>
+                            <table id="xxx" border="none">
+                                <tr>
+                                    <td class="quadrant">
+                                        <p id="input7"></p>
+                                    </td>
+                                    <td class="toprightquadrant">
+                                        <p id="trq7"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bottomquadrant" id="bq7"></td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <!--                    frame 8-->
+                    <td id="frame8">
+                        <div>
+                            <table id="xxx" border="none">
+                                <tr>
+                                    <td class="quadrant">
+                                        <p id="input8"></p>
+                                    </td>
+                                    <td class="toprightquadrant">
+                                        <p id="trq8"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bottomquadrant" id="bq8"></td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <!--                    frame 9-->
+                    <td id="frame9">
+                        <div>
+                            <table id="xxx" border="none">
+                                <tr>
+                                    <td class="quadrant">
+                                        <p id="input9"></p>
+                                    </td>
+                                    <td class="toprightquadrant">
+                                        <p id="trq9"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bottomquadrant" id="bq9"></td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <!--                    frame 10-->
+                    <td id="frame10">
+                        <div>
+                            <table id="xxx" border="none">
+                                <tr>
+                                    <td class="quadrant">
+                                        <p id="input10"></p>
+                                    </td>
+                                    <td class="toprightquadrant">
+                                        <p id="trq10"></p>
+                                    </td>
+                                    <td class="toprightquadrant10">
+                                        <p id="trqten"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bottomquadrant" id="bq10"></td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <img id="image1">
+                    </td>
+                    <td>
+                        <img id="image2">
+                    </td>
+                    <td>
+                        <img id="image3">
+                    </td>
+                    <td>
+                        <img id="image4">
+                    </td>
+                    <td>
+                        <img id="image5">
+                    </td>
+                    <td>
+                        <img id="image6">
+                    </td>
+                    <td>
+                        <img id="image7">
+                    </td>
+                    <td>
+                        <img id="image8">
+                    </td>
+                    <td>
+                        <img id="image9">
+                    </td>
+                    <td>
+                        <img id="image10">
+                    </td>
+
+
+
+
+                </tr>
+
+            </table>
+        </div>
+
+
+        <h2>How to play</h2>
+        <p id="whitecolour">Using numbers at the top of the page, enter the number of pins that were knocked down for the highlighted frame.<br>
+            Special bonuses are awarded for strikes and spares. <br> When a strike is bowled, the bowler is awarded the score of 10 (for knocking down all ten pins), plus he gets to add the total of his next two rolls to that frame. <br>For a spare, the bowler gets the 10, plus the total number of pins knocked down on the next roll only.
+        </p>
+
+
+
+
+
+        <footer>
+
+            <p id="whitecolour" align="center"> &copy; Copyright 2019, James Wood</p>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+        <script>
+            var RolesCompleted = 0;
+            var currentframe = 1;
+            var TwoThrowsLeft = true;
+            var OneThrowLeft = false;
+
+
+            function button1() {
+                //Get the number (from 1 - 10) chosen by the user
+                var chosenNumberofPins = document.getElementById("button1").value;
+                doThisNow(chosenNumberofPins);
+                //currentframe++;
+            }
+
+            function button9() {
+                var chosenNumberofPins = document.getElementById("button9").value;
+                doThisNow(chosenNumberofPins);
+            }
+
+            function button10() {
+                var chosenNumberofPins = document.getElementById("button10").value;
+                doThisNow(chosenNumberofPins);
+            }
+
+            function doThisNow(chosenNumberofPins) {
+                //Find out if the values add to 10(The bowler got a spare!!)
+
+
+
+
+                //////
+                //find out if top left is blank
+                var topleft = document.getElementById("input" + currentframe).innerHTML;
+                console.log("top left is " + topleft);
+
+                if (currentframe == 1) {
+
+                    if (topleft == "") {
+
+                        if (chosenNumberofPins == 10) {
+                            document.getElementById("trq" + currentframe).innerHTML = "X";
+                            incrementFrameandChangeBackgroundColour(chosenNumberofPins);
+                        } else {
+                            document.getElementById("input" + currentframe).innerHTML = chosenNumberofPins;
+                        }
+                    } else {
+
+
+                        //If spare
+                        if ((parseInt(topleft) + parseInt(chosenNumberofPins)) == 10) {
+                            document.getElementById("trq" + currentframe).innerHTML = "/";
+                            incrementFrameandChangeBackgroundColour();
+
+
+
+
+
+
+
+
+                            //If total pins per frame > 10
+                        } else if ((parseInt(topleft) + parseInt(chosenNumberofPins)) > 10) {
+                            alert("Error, you cannot score more than 10 pins per frame!");
+                            //If no strike or spare    
+                        } else {
+
+                            document.getElementById("trq" + currentframe).innerHTML = chosenNumberofPins;
+                            incrementFrameandChangeBackgroundColour(chosenNumberofPins);
+                            calculateTheScoreNormal();
+                        }
+                    }
+
+                } else if (currentframe >= 2 && currentframe <= 9) {
+                    if (topleft == "") {
+
+                        var topRightPrevious = document.getElementById("trq" + (currentframe - 1)).innerHTML;
+                        if (currentframe == 2) {
+                            var topRightPreviousPrevious = "nothing to see here, move along";
+                        } else {
+                            var topRightPreviousPrevious = document.getElementById("trq" + (currentframe - 2)).innerHTML;
+                        }
+                        if (topRightPrevious == "/") {
+                            doSpareCalculation(chosenNumberofPins);
+                        }
+                        if (topRightPrevious == "X") {
+                            doStrikeCalculation(chosenNumberofPins, topRightPrevious, topRightPreviousPrevious)
+                        }
+
+
+
+                        //If strike
+                        if (chosenNumberofPins == 10) {
+                            document.getElementById("trq" + currentframe).innerHTML = "X";
+                            var topRightPrevious = document.getElementById("trq" + (currentframe - 1)).innerHTML;
+                            if (currentframe == 2) {
+                                var topRightPreviousPrevious = "nothing to see here, move along";
+                            } else {
+                                var topRightPreviousPrevious = document.getElementById("trq" + (currentframe - 2)).innerHTML;
+                            }
+                            if (topRightPrevious == "X") {
+                                doStrikeCalculation(chosenNumberofPins, topRightPrevious, topRightPreviousPrevious)
+                            }
+                            incrementFrameandChangeBackgroundColour(chosenNumberofPins);
+                        } else {
+                            document.getElementById("input" + currentframe).innerHTML = chosenNumberofPins;
+                        }
+                    } else {
+
+
+                        //If spare
+                        if ((parseInt(topleft) + parseInt(chosenNumberofPins)) == 10) {
+                            document.getElementById("trq" + currentframe).innerHTML = "/";
+                            var topRightPrevious = document.getElementById("trq" + (currentframe - 1)).innerHTML;
+                            if (currentframe == 2) {
+                                var topRightPreviousPrevious = "nothing to see here, move along";
+                            } else {
+                                var topRightPreviousPrevious = document.getElementById("trq" + (currentframe - 2)).innerHTML;
+                            }
+                            if (topRightPrevious == "X") {
+                                doStrikeCalculation(chosenNumberofPins, topRightPrevious, topRightPreviousPrevious);
+                            }
+                            incrementFrameandChangeBackgroundColour(chosenNumberofPins);
+
+
+                            //If total pins per frame > 10
+                        } else if ((parseInt(topleft) + parseInt(chosenNumberofPins)) > 10) {
+                            alert("Error, you cannot score more than 10 pins per frame!");
+                            //If no strike or spare    
+                        } else {
+
+                            document.getElementById("trq" + currentframe).innerHTML = chosenNumberofPins;
+                            var topRightPrevious = document.getElementById("trq" + (currentframe - 1)).innerHTML;
+                            if (topRightPrevious == "X") {
+                                doStrikeCalculation(chosenNumberofPins);
+                            }
+                            incrementFrameandChangeBackgroundColour(chosenNumberofPins);
+
+
+                            calculateTheScoreNormal();
+
+                        }
+                    }
+
+                } else if (currentframe == 10) {
+
+                    if (topleft == "") {
+                        var topRightPrevious = document.getElementById("trq" + (currentframe - 1)).innerHTML;
+                        var topRightPreviousPrevious = document.getElementById("trq" + (currentframe - 2)).innerHTML;
+
+
+                        if (topRightPrevious == "/") {
+                            doSpareCalculation(chosenNumberofPins);
+                        }
+                        if (topRightPrevious == "X") {
+                            doStrikeCalculation(chosenNumberofPins, topRightPrevious, topRightPreviousPrevious)
+                        }
+
+
+
+                        //If strike
+                        if (chosenNumberofPins == 10) {
+                            document.getElementById("input" + currentframe).innerHTML = "X";
+                            if (topRightPrevious == "X") {
+                                doStrikeCalculation(chosenNumberofPins, topRightPrevious, topRightPreviousPrevious)
+                            }
+
+                        } else {
+                            document.getElementById("input" + currentframe).innerHTML = chosenNumberofPins;
+                        }
+
+                    } else {
+
+
+
+
+                        var getTopLeft10thFrame = document.getElementById("input" + currentframe).innerHTML;
+                        var get9thFrame = document.getElementById("trq" + (currentframe - 1)).innerHTML;
+                        var getTopRight10thFrame = document.getElementById("trq" + (currentframe)).innerHTML;
+
+                        if (getTopRight10thFrame == "") {
+                            if (getTopLeft10thFrame == "X" && get9thFrame == "X") {
+                                if (chosenNumberofPins == 10) {
+                                    document.getElementById("trq" + currentframe).innerHTML = "X";
+                                } else {
+                                    document.getElementById("trq" + currentframe).innerHTML = chosenNumberofPins;
+                                }
+                                doLastStrikeCalculation(chosenNumberofPins);
+                            } else {
+                                if ((parseInt(getTopLeft10thFrame) + parseInt(chosenNumberofPins)) > 10) {
+                                    alert("Error, you cannot score more than 10 pins per frame!");
+                                } else {
+
+                                    if ((parseInt(getTopLeft10thFrame) + parseInt(chosenNumberofPins)) == 10) {
+                                        document.getElementById("trq" + currentframe).innerHTML = "/";
+                                        /////////////////////
+                                        if (get9thFrame == "X") {
+                                            doStrikeCalculation(chosenNumberofPins, topRightPrevious, topRightPreviousPrevious);
+                                                }
+                                        ///////////////////
+                                    } else {
+                                        document.getElementById("trq" + currentframe).innerHTML = chosenNumberofPins;
+
+                                        if (get9thFrame == "X") {
+                                            var previousFrame = parseInt(document.getElementById("bq" + (currentframe - 2)).innerHTML);
+                                            var getTopRight10thFrame = document.getElementById("trq" + (currentframe)).innerHTML;
+                                            var ans = parseInt(getTopLeft10thFrame) + parseInt(getTopRight10thFrame) + previousFrame + 10;
+                                            document.getElementById("bq" + (currentframe -1)).innerHTML = ans;
+                                            var previousFrame = parseInt(document.getElementById("bq" + (currentframe - 1)).innerHTML);
+                                            var ans = parseInt(getTopLeft10thFrame) + parseInt(getTopRight10thFrame) + previousFrame;
+                                            document.getElementById("bq" + (currentframe)).innerHTML = ans;
+                                            alert("The game is finished, your final score is..... " + ans);
+                                        } else {
+                                            var previousFrame = parseInt(document.getElementById("bq" + (currentframe - 1)).innerHTML);
+                                            var getTopRight10thFrame = document.getElementById("trq" + (currentframe)).innerHTML;
+                                            var ans = parseInt(getTopLeft10thFrame) + parseInt(getTopRight10thFrame) + previousFrame;
+                                            document.getElementById("bq" + (currentframe)).innerHTML = ans;
+                                            alert("The game is finished, your final score is..... " + ans);
+                                        }
+
+
+
+                                    }
+
+
+
+
+
+                                }
+                            }
+
+                        } else {
+                            if (getTopRight10thFrame != "X" && getTopRight10thFrame != "/") {
+                                alert("The game is finished, refresh to play again!")
+                            }
+
+
+
+
+
+                        }
+
+
+
+
+
+
+                    }
+
+                }
+
+
+
+                //                else if (currentframe >=10) {
+                //                    var topRight = document.getElementById("trq" + currentframe).innerHTML;
+                //                    var topRightPrevious = document.getElementById("trq" + (currentframe - 1)).innerHTML;
+                //                    var topRightPreviousPrevious = document.getElementById("trq" + (currentframe - 2)).innerHTML;
+                //                    
+                //                    alert("You are on the final frame, get a strike or spare to get an extra throw");
+                //                    if (topleft == "") {
+                //                        if (chosenNumberofPins == 10) {
+                //                            document.getElementById("input" + currentframe).innerHTML = "X";
+                //                            }
+                //                            else {document.getElementById("input" + currentframe).innerHTML = chosenNumberofPins;}
+                //                        
+                //                        if (topRightPrevious == "X") {
+                //                                doStrikeCalculation(chosenNumberofPins, topRightPrevious, topRightPreviousPrevious);
+                //                            }
+                //                    }
+                //                    else if (topRight =="")  {
+                //                        document.getElementById("trq" + currentframe).innerHTML = chosenNumberofPins;
+                //                        calculateTheScoreNormal();
+                //                    }
+                //                    else {
+                //                        document.getElementById("trqten").innerHTML = chosenNumberofPins;
+                //                    }
+                //
+                //                }
+            }
+
+
+
+            //console.log ("The score entered was " + chosenNumberofPins);
+            //document.getElementById("currentFrame").innerHTML = "Current frame is  " + currentframe;
+            //document.getElementById("rolesCompleted").innerHTML = "Roles completed is  " + RolesCompleted;
+
+            function incrementFrameandChangeBackgroundColour(chosenNumberofPins) {
+                currentframe++;
+                var element = document.getElementById("frame" + currentframe);
+                element.classList.add("frameStyle");
+
+                var topRight = document.getElementById("trq" + (currentframe - 1)).innerHTML;
+                if (chosenNumberofPins == 10) {
+                    document.getElementById("image" + (currentframe - 1)).src = "images/strike.jpg";
+
+                    var imageElement = document.getElementById("image" + (currentframe - 1));
+                    imageElement.style.visibility = "visible";
+                }
+                if (topRight == "/") {
+                    document.getElementById("image" + (currentframe - 1)).src = "images/spare.jpg";
+                    var imageElement = document.getElementById("image" + (currentframe - 1));
+                    imageElement.style.visibility = "visible";
+                }
+            }
+
+
+            function calculateTheScoreNormal() {
+
+                var topleft = parseInt(document.getElementById("input" + (currentframe - 1)).innerHTML);
+                var topright = parseInt(document.getElementById("trq" + (currentframe - 1)).innerHTML);
+                if (currentframe == 2) {
+                    var ans = topleft + topright;
+                    document.getElementById("bq" + (currentframe - 1)).innerHTML = ans;
+                } else {
+                    var previousFrame = parseInt(document.getElementById("bq" + (currentframe - 2)).innerHTML);
+                    var ans = topleft + topright;
+                    document.getElementById("bq" + (currentframe - 1)).innerHTML = ans + previousFrame;
+                }
+
+
+
+            }
+
+
+            function doLastStrikeCalculation(chosenNumberofPins) {
+                var previousFrame = parseInt(document.getElementById("bq" + (currentframe - 2)).innerHTML);
+                if (chosenNumberofPins == 10) {
+                    var ans = 30;
+                } else {
+                    var ans = 30 - (10 - chosenNumberofPins)
+                };
+                document.getElementById("bq" + (currentframe - 1)).innerHTML = ans + previousFrame;
+            }
+
+
+
+
+            function doStrikeCalculation(chosenNumberofPins, topRightPrevious, topRightPreviousPrevious) {
+                var topleft = parseInt(document.getElementById("input" + currentframe).innerHTML);
+                var topRight = parseInt(chosenNumberofPins);
+                var spare = document.getElementById("trq" + currentframe).innerHTML;
+                if (topRightPrevious == "X" && topRightPreviousPrevious != "X") {
+                    console.log("Do nothing yet because there are 2 strikes in a row")
+
+                    if (spare == "/") {
+                        var ans = topleft + topRight + 10;
+
+                        if (currentframe != 2) {
+                            var previousFrame = parseInt(document.getElementById("bq" + (currentframe - 2)).innerHTML);
+                            document.getElementById("bq" + (currentframe - 1)).innerHTML = ans + previousFrame;
+                        } else {
+                            document.getElementById("bq" + (currentframe - 1)).innerHTML = ans;
+                        }
+                    }
+
+
+
+
+
+                } else if (topRightPrevious == "X" && topRightPreviousPrevious == "X") {
+
+                    if (spare == "/") {
+                        var ans = topleft + topRight + 10;
+
+                        if (currentframe != 2) {
+                            var previousFrame = parseInt(document.getElementById("bq" + (currentframe - 2)).innerHTML);
+                            document.getElementById("bq" + (currentframe - 1)).innerHTML = ans + previousFrame;
+                        } else {
+                            document.getElementById("bq" + (currentframe - 1)).innerHTML = ans;
+                        }
+                    } else if (currentframe <= 3) {
+                        document.getElementById("bq" + (currentframe - 2)).innerHTML = 20 + parseInt(chosenNumberofPins);
+                    } else {
+                        var previousFrame = parseInt(document.getElementById("bq" + (currentframe - 3)).innerHTML);
+                        document.getElementById("bq" + (currentframe - 2)).innerHTML = 20 + parseInt(chosenNumberofPins) + previousFrame;
+                    }
+
+
+                } else {
+
+                    var ans = topleft + topRight + 10;
+
+                    if (currentframe != 2) {
+                        var previousFrame = parseInt(document.getElementById("bq" + (currentframe - 2)).innerHTML);
+                        document.getElementById("bq" + (currentframe - 1)).innerHTML = ans + previousFrame;
+                    } else {
+                        document.getElementById("bq" + (currentframe - 1)).innerHTML = ans;
+                    }
+                }
+            }
+
+
+
+            function doSpareCalculation(chosenNumberofPins) {
+                var topleft = parseInt(chosenNumberofPins);
+                var ans = topleft + 10;
+
+
+                if (currentframe != 2) {
+                    var previousFrame = parseInt(document.getElementById("bq" + (currentframe - 2)).innerHTML);
+                    document.getElementById("bq" + (currentframe - 1)).innerHTML = ans + previousFrame;
+                } else {
+                    document.getElementById("bq" + (currentframe - 1)).innerHTML = ans;
+                }
+            }
+
+
+
+
+
+            function button2() {
+                var chosenNumberofPins = document.getElementById("button2").value;
+                doThisNow(chosenNumberofPins);
+            }
+
+            function button3() {
+                var chosenNumberofPins = document.getElementById("button3").value;
+                doThisNow(chosenNumberofPins);
+            }
+
+            function button4() {
+                var chosenNumberofPins = document.getElementById("button4").value;
+                doThisNow(chosenNumberofPins);
+            }
+
+            function button5() {
+                var chosenNumberofPins = document.getElementById("button5").value;
+                doThisNow(chosenNumberofPins);
+            }
+
+            function button6() {
+                var chosenNumberofPins = document.getElementById("button6").value;
+                doThisNow(chosenNumberofPins);
+            }
+
+            function button7() {
+                var chosenNumberofPins = document.getElementById("button7").value;
+                doThisNow(chosenNumberofPins);
+            }
+
+            function button8() {
+                var chosenNumberofPins = document.getElementById("button8").value;
+                doThisNow(chosenNumberofPins);
+            }
+
+        </script>
+
+    </body>
+
+
+
+
+
+
+
+
+    </html>

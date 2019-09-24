@@ -1,0 +1,101 @@
+body{
+        background-image: url(../images/bowlingbackground4.jpg);
+       
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 106vh;
+    margin: 0;
+/*
+   
+    background-size: 1422px;
+    background-repeat: no-repeat;
+    overflow: scroll;
+*/
+}
+
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    margin-bottom: 70px;
+}
+
+#whitecolour {
+    color: white;
+}
+
+th {
+color:antiquewhite; 
+        font-size: x-large;
+}
+table, th, td {
+/*
+    border: 1px solid white;
+    padding: 5px;
+*/
+/*    color: white;*/
+/*    font-size: larger;*/
+}
+
+.quadrant {
+            border: none;
+}
+
+td.toprightquadrant {
+/*    padding: 6px;*/
+    text-align: center;
+}
+
+
+.clear {
+    clear: both;
+}
+
+.bottomquadrant {
+    text-align: right;
+    font-weight: bold;
+    font-size: xx-large;
+    border: none;
+}
+
+
+table#xxx {
+     width: 100%;
+    border:none;
+    height: 120px;
+}
+
+.frameStyle {
+    background: darkgrey;
+    opacity: 0.8;
+}
+
+img {
+        width: 126px;
+    height:100px;
+    vertical-align: middle;
+    border:none;
+    visibility: hidden;
+}
+
+p {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-size: larger;
+}
+
+
+/* .quadrant {
+    background-color: red}
+} */
